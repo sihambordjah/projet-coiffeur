@@ -21,18 +21,39 @@
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Coiffeur à Saint — Ouen — Sur — Seine</title>
   </head>
   <body>
     <header>
       <a href="" class="logo"><span>P</span>restige <span>C</span>oiffure</a>
+      <div class="menutoggle" onclick="toggleMenu();"></div>
       <ul class="navbar">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Nos Prestations</a></li>
-        <li><a href="#">Nos Réalisations</a></li>
-        <li><a href="#">Contact</a></li>
-        <a href="#" class="btn-reserve">Prendre RDV</a>
+        <li><a href="#banniere" onclick="toggleMenu();">Accueil</a></li>
+        <!-- Dropdown menu -->
+        <li class="nav-item-dropdown">
+          <a
+            class="dropdown-trigger"
+            href="#prestations"
+            onclick="toggleMenu();"
+            >Nos Prestations</a
+          >
+          <ul class="dropdown-menu">
+            <li class="dropdown-menu-item"><a href="#">Femme</a></li>
+            <li class="dropdown-menu-item"><a href="#">Homme</a></li>
+            <li class="dropdown-menu-item">
+              <a href="#">Coiffure événements</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#" onclick="toggleMenu();">Nos Réalisations</a></li>
+        <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+        <a href="#" class="btn-reserve" onclick="toggleMenu();">Prendre RDV</a>
       </ul>
     </header>
     <section class="banniere" id="banniere">
@@ -41,10 +62,6 @@
           Se faire coiffer dans une Atmosphère salon accueillante en
           Saint-Ouen-sur-Seine
         </h1>
-        <!--<p>
-          Se faire coiffer dans une Atmosphère salon accueillante en
-          Saint-Ouen-sur-Seine
-        </p>-->
         <a href="#" class="btn">Prendre Rendez-Vous</a>
       </div>
     </section>
@@ -55,7 +72,8 @@
       </div>
       <div class="right">
         <span class="text-right"
-          >La coiffure sur-mesure, c'est ici, prestige coiffur, à Melun</span
+          >La coiffure sur-mesure, c'est ici, prestige coiffur, à
+          Saint-Ouen-sur-Seine</span
         >
         <h2>Notre salon</h2>
         <p>
@@ -72,7 +90,7 @@
       </div>
     </section>
     <!--section-->
-    <section class="prestations">
+    <section class="prestations" id="prestations">
       <h2 class="title">Nos prestations</h2>
       <p class="small-desc">
         Des coupes tendance, des couleurs éclatantes, un service chaleureux
@@ -169,9 +187,8 @@
       </div>
     </section>
     <!--section contact-->
-    <section class="contact">
-      <span class="big-circle"></span>
-      <span class="big-circle-one"></span>
+    <section class="contact" id="contact">
+      <!--<span class="big-circle"></span>-->
       <div class="form">
         <!--partie information-->
         <div class="contact-info">
@@ -237,6 +254,37 @@
         </div>
       </div>
     </section>
+    <section class="contenair-maps">
+      <h1>Explore Our Location</h1>
+      <div class="maps">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.5255102275746!2d2.328418875125994!3d48.90537929740035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66efc99c238af%3A0x6768d2a0c8c41f01!2s7%20Rue%20Garibaldi%2C%2093400%20Saint-Ouen-sur-Seine!5e0!3m2!1sfr!2sfr!4v1761747114273!5m2!1sfr!2sfr"
+          width="100%"
+          height="200"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <a href="#" class="button"> View on google Maps </a>
+    </section>
+    <div class="footer-basic">
+      <footer>
+        <div class="social">
+          <a href="#"><i class="icon ion-social-instagram"></i></a>
+          <a href="#"><i class="icon ion-social-facebook"></i></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Accueil</a></li>
+          <li class="list-inline-item"><a href="#">Nos Prestations</a></li>
+          <li class="list-inline-item"><a href="#">Nos Réalisations</a></li>
+          <li class="list-inline-item"><a href="#">Contact</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Prestige Coiffure © 2025</p>
+      </footer>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
