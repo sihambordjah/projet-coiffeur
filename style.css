@@ -68,32 +68,48 @@ header .navbar li a:hover {
   color: #eababa;
   border-bottom: 2px solid #eababa;
 }
-/*--------------*/
-.nav-item-dropdown {
-   position: relative;
+/*-------header sticky-----*/
+header.sticky {
+  background: #fff;
+  padding: 10px 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
 }
-  .nav-item-dropdown:hover > .dropdown-menu {
-    display: block;
-    opacity: 1;
-  }
- .dropdown-trigger {
+header.sticky .logo {
+  color: #000;
+}
+header.sticky .navbar li a {
+  color: #000;
+}
+header.sticky li a:hover {
+  color: #eababa;
+  border-bottom: 2px solid #eababa;
+}
+/*--------Menu dropdown------*/
+.nav-item-dropdown {
   position: relative;
 }
- .dropdown-trigger:focus + .dropdown-menu {
-    display: block;
-    opacity: 1;
-  }
-   .dropdown-trigger::after {
-    content: "›";
-    position: absolute;
-    color: #000;
-    font-size: 24px;
-    font-weight: bold;
-    transform: rotate(90deg);
-    top: -5px;
-    right: -15px;
-  }
-  .dropdown-menu {
+.nav-item-dropdown:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+.dropdown-trigger {
+  position: relative;
+}
+.dropdown-trigger:focus + .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+.dropdown-trigger::after {
+  content: "›";
+  position: absolute;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  transform: rotate(90deg);
+  top: -5px;
+  right: -15px;
+}
+.dropdown-menu {
   background-color: #fff;
   display: inline-block;
   text-align: right;
@@ -102,21 +118,20 @@ header .navbar li a:hover {
   right: -10px;
   display: none;
   opacity: 0;
-  transition: opacity 0.5s ease; 
+  transition: opacity 0.5s ease;
   width: 160px;
 }
- .dropdown-menu a {
-    color: #d41010;
-  }
-  .dropdown-menu-item {
+.dropdown-menu a {
+  color: #d41010;
+}
+.dropdown-menu-item {
   cursor: pointer;
   padding: 1em;
   text-align: center;
-  
 }
-  .dropdown-menu-item:hover {
-    background-color: darken(#ED3E44, 5%);
-  }
+.dropdown-menu-item:hover {
+  background-color: darken(#ed3e44, 5%);
+}
 
 /*-------------*/
 /*-----section banniere--------*/
@@ -624,22 +639,7 @@ textarea.input {
   right: 50px;
   opacity: 0.3;
 }
-/*-------header sticky-----*/
-header.sticky {
-  background: #fff;
-  padding: 10px 10px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
-}
-header.sticky .logo {
-  color: #000;
-}
-header.sticky .navbar li a {
-  color: #000;
-}
-header.sticky li a:hover {
-  color: #eababa;
-  border-bottom: 2px solid #eababa;
-}
+
 /*-----google maps------*/
 .contenair-maps {
   max-width: 800px;
@@ -738,7 +738,7 @@ iframe {
 .footer-basic .social > a:hover {
   opacity: 0.9;
 }
-.footer-basic .social .icon{
+.footer-basic .social .icon {
   margin-left: 10px;
 }
 .footer-basic .copyright {
@@ -803,6 +803,7 @@ iframe {
   header.sticky .menutoggle {
     filter: invert(1);
   }
+  /*---------banniere---------*/
   .banniere .centenu h1 {
     font-size: 2em;
   }
